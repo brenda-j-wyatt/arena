@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Current — Generative Synth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Study Current home"><span class="brand-mark">∿</span> STUDY CURRENT</a>
+        <div class="top-actions"><span class="status-dot"></span><span id="statusText">READY</span><button class="icon-button" id="themeButton" aria-label="Toggle color mode">◐</button></div>
+      </header>
+
+      <section class="hero">
+        <div><p class="eyebrow">A GENERATIVE INSTRUMENT FOR DEEP WORK</p><h1>Find your<br><em>current.</em></h1></div>
+        <p class="intro">Slow-moving tones, tuned to stay out of the way. Press play and let the pattern evolve around your work.</p>
+      </section>
+
+      <section class="instrument" aria-label="Study Current controls">
+        <div class="now-playing"><div class="play-halo"><button id="playButton" class="play-button" aria-label="Start sound"><span class="play-icon"></span></button></div><div><p class="label">NOW PLAYING</p><h2 id="presetName">TIDAL FOCUS</h2><p class="subline" id="soundDescription">E minor · soft granular pad</p></div><div class="meter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div class="line"></div>
+
+        <div class="control-grid">
+          <section class="control-block mood-block"><div class="block-head"><p class="label">MOOD</p><span id="moodValue">CALM</span></div><div class="mood-choices" role="group" aria-label="Mood"><button class="mood active" data-mood="calm">CALM</button><button class="mood" data-mood="drift">DRIFT</button><button class="mood" data-mood="focus">FOCUS</button></div></section>
+          <section class="control-block"><div class="block-head"><p class="label">DENSITY</p><span id="densityValue">SPARSE</span></div><input id="density" class="range" type="range" min="1" max="3" value="1" aria-label="Density" /><div class="range-labels"><span>SPARSE</span><span>FLOW</span><span>RICH</span></div></section>
+          <section class="control-block"><div class="block-head"><p class="label">WARMTH</p><span id="warmthValue">62%</span></div><input id="warmth" class="range" type="range" min="0" max="100" value="62" aria-label="Warmth" /><div class="range-labels"><span>GLASS</span><span>AMBER</span></div></section>
+        </div>
+
+        <div class="timing-row">
+          <div><p class="label">SESSION</p><div class="session-buttons" role="group" aria-label="Session length"><button class="session active" data-minutes="0">∞</button><button class="session" data-minutes="25">25</button><button class="session" data-minutes="50">50</button></div></div>
+          <div class="timer-wrap"><p class="label">ELAPSED</p><time id="timer">00:00</time></div>
+          <button id="newPattern" class="new-pattern"><span>↻</span> NEW PATTERN</button>
+        </div>
+      </section>
+
+      <section class="preset-section"><div class="section-heading"><p class="label">SELECT A SPACE</p><span>01—04</span></div><div class="preset-grid">
+        <button class="preset-card selected" data-preset="tidal"><span class="card-number">01</span><span class="card-symbol wave">⌁</span><strong>TIDAL FOCUS</strong><small>Slow pulse · E minor</small></button>
+        <button class="preset-card" data-preset="library"><span class="card-number">02</span><span class="card-symbol">◌</span><strong>QUIET LIBRARY</strong><small>Felt keys · C major</small></button>
+        <button class="preset-card" data-preset="rain"><span class="card-number">03</span><span class="card-symbol">⋰</span><strong>RAIN WINDOW</strong><small>Warm haze · D minor</small></button>
+        <button class="preset-card" data-preset="night"><span class="card-number">04</span><span class="card-symbol">✦</span><strong>NIGHT DESK</strong><small>Low hum · A minor</small></button>
+      </div></section>
+
+      <footer><span>GENERATIVE AUDIO · HEADPHONES RECOMMENDED</span><span id="footerState">SOUND OFF</span></footer>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
