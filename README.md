@@ -50,3 +50,16 @@ Study Current uses the native browser [Web Audio API](https://developer.mozilla.
 ## Notes
 
 Audio playback needs a user gesture, so the synth starts only after pressing the play control. Headphones are recommended for the full effect.
+
+---
+
+## Birthday card for Jayne
+
+A separate, self-contained deliverable lives in [`birthday-card/`](birthday-card/):
+a single-file interactive birthday card that can be emailed as an attachment or sent as
+a link, and opens on an iPhone, an iPad, or a desktop browser.
+
+- The card: `birthday-card/jayne-birthday-card.html` (open it directly — no build step)
+- Instructions, including how to personalise and send it: `birthday-card/README.md`
+- While `npm run start` is running, it is served at
+  `/birthday-card/jayne-birthday-card.html`, or run `npm run card` to open it locally.
