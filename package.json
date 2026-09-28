@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "vite --host 0.0.0.0"
+    "start": "vite --host 0.0.0.0",
+    "card": "vite --host 0.0.0.0 --open /birthday-card/jayne-birthday-card.html"
   },
   "devDependencies": {
     "vite": "latest"
